@@ -1,0 +1,92 @@
+* {
+    font-family: 'Merriweather', serif;
+}
+
+header {
+    background-color: #2E3944;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+}
+
+input {
+    background-color: #EFF0F1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 12px;
+}
+
+form label {
+    margin-bottom: 15px;
+}
+
+button {
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #53BBB4;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    padding: 15px 20px;
+    border: 2px solid #EFF0F1;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    background-color: #EFF0F1;
+}
+
+textarea {
+    margin-bottom: 30px;
+}
+
+input:focus {
+    border: 2px solid #2E3944;
+    outline: none;
+}
+
+.intro-text {
+    padding-top: 30px;
+}
+
+.intro-text h2 {
+    font-size: 15px;
+    color: #2E3944;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-text p {
+    color: #EFF0F1;
+}
+
+/*Helper*/
+
+.text-centered {
+    text-align: center;
+}
+
+.page-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
