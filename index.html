@@ -16,23 +16,25 @@
         </div>
     </div>
     <form class="page-padding">
-        <h3>Contact Information</h3>
+        <fieldset>
+        <legend>Contact Information</legend>
         <label for="form-name">Full name</label>
-        <input id="form-name" type="text">
+        <input id="form-name" name="form-name" placeholder="Required" type="text">
 
-        <label for="form-email">Full name</label>
-        <input id="form-email" type="email">
+        <label for="form-email">Email Address</label>
+        <input id="form-email" name="form-email" placeholder="Required" type="email">
 
-        <label for="form-phone">Full name</label>
-        <input id="form-phone" type="tel">
+        <label for="form-phone">Phone Number</label>
+        <input id="form-phone" name="form-phone" type="tel">
 
-        <label for="form_street-address">Full name</label>
-        <input id="form_street-address" type="text">
+        <label for="form_street-address">Street Address</label>
+        <input id="form-street-address" name="form-street-address" type="text">
 
-        <label for="form-city-address" >Full name</label>
-        <input id="form-city-address" type="text">
+        <label for="form-city-address">City</label>
+        <input id="form-city-address" name="form-city-address" type="text">
 
-        <select name="test">
+        <label for="form-city-address">State</label>
+        <select id="form-state-address" name="">
             <option selected disabled>Choose State</option>
             <option>Germany</option>
             <option>Austria</option>
@@ -43,26 +45,38 @@
         <label for="form-city-zip" >Zip Code</label>
         <input id="form-city-zip" type="text">
 
-        <hr>
-        <h3>Newsletter</h3>
+        </fieldset>
+        <legend>Newsletter</legend>
         <p>Select the newsletter you want to recieve</p>
-        <input type="checkbox" id="newsletter-html">
-        <label for="newsletter-html">HTML News</label>
-        <input type="checkbox" id="newsletter-css">
-        <label for="newsletter-css">CSS News</label>
-        <input type="checkbox" id="newsletter-javascript">
-        <label for="newsletter-javascript">Javascript News</label>
+        <div class="newsletter-input">
+            <input type="checkbox" id="newsletter-html">
+            <label for="newsletter-html">HTML News</label>
+        </div>
+        <div class="newsletter-input">
+            <input type="checkbox" id="newsletter-css">
+            <label for="newsletter-css">CSS News</label>
+        </div>
+        <div class="newsletter-input">
+            <input type="checkbox" id="newsletter-javascript">
+            <label for="newsletter-javascript">Javascript News</label>
+        </div>
 
         <p>Newsletter Format</p>
-        <input type="radio" id="newsletter-format-html" name="newsletter-format-html">
-        <label for="newsletter-format-html">HTML</label>
-        <input type="radio" id="newsletter-format-text" name="newsletter-format-html">
-        <label for="newsletter-format-text">Plain text</label>
+        <div class="newsletter-input">
+            <input type="radio" id="newsletter-format-html" name="newsletter-format-html">
+            <label for="newsletter-format-html">HTML</label>
+        </div>
+        <div class="newsletter-input">
+            <input type="radio" id="newsletter-format-text" name="newsletter-format-html">
+            <label for="newsletter-format-text">Plain text</label>
+        </div>
 
         <label for="additional-topics">Other topics you would like to hear about</label>
-        <textarea id="additional-topics"></textarea>
+        <textarea class="additional-topics" id="additional-topics"></textarea>
         <button type="submit">Sign Up</button>
-        <p>Copyright The Code Review</p>
+        <footer class="text-centered">
+            <i>Copyright The Code Review</i>
+        </footer>
     </form>
 
     </body>
