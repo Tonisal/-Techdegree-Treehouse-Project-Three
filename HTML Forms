@@ -1,0 +1,38 @@
+HTML Forms
+
+<form></form> <— wraps the form
+
+You can not nest forms inside other forms!
+
+Attributes for form element:
+
+action (e. g. action=„index.html“)
+method (method=„post“) <— http post oder get method (post = submit to server, get = data is sent via url)
+
+
+
+
+<input> <— self closing, no closing tag
+
+<input type=„text“ id=„name“ name=„user_name“>
+
+type: kind of input (email, tel, password etc)
+name: needed for the server to reference
+
+
+<textarea></textarea> <—Users can type in a lot of text
+
+<textarea id =„bio“ name=„user_bio“></textarea>
+
+
+<button></button>
+
+type=„reset“ <— deletes all content in form inputs
+
+
+<select></select> <— gives you the chance to chose between several options in a dropdown. Options have to be wrapped with <option>-tags
+
+You can label the options in your select field with the <optgroup>-element
+
+Input type=„radio“ <— if you have more than one radio button you have to set the name-attribute the same value if you want the user to be able to just select one
+
