@@ -1,6 +1,7 @@
 * {
     font-family: 'Merriweather', serif;
     font-size: 12px;
+    box-sizing: border-box;
 }
 
 header {
@@ -20,15 +21,6 @@ input {
     background-color: #EFF0F1;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-bottom: 15px;
-}
-
 button[type="submit"] {
     color: #fff;
     padding-top: 20px;
@@ -36,24 +28,29 @@ button[type="submit"] {
     background-color: #53BBB4;
     border-radius: 5px;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-select,
-textarea {
+textarea,
+select {
     padding: 15px 20px;
     border: 2px solid #EFF0F1;
     border-radius: 5px;
-    font-size: 20px;
-    margin-bottom: 20px;
     background-color: #EFF0F1;
     color: #C7C7C7;
+    font-size: 20px;
+    width: 100%;
+    transition: border 0.2s;
+    outline: none;
 }
 
 form select {
     font-size: 12px;
+    margin-bottom: 20px;
+    height: 50px;
 }
 
 input:focus {
@@ -66,8 +63,11 @@ input::placeholder {
 }
 
 legend {
+    text-transform: capitalize;
     font-size: 15px;
     margin-bottom: 30px;
+    display: none;
+    text-align: center;
 }
 
 i {
@@ -76,6 +76,32 @@ i {
 
 footer {
     padding-bottom: 200px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid #2E3944;
+}
+
+.form-wrapper fieldset {
+    padding: 0;
+    margin: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #2E3944;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .intro-text {
@@ -87,21 +113,10 @@ footer {
     color: #2E3944;
 }
 
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
 .intro-text p {
     color: #C7C7C7;
+    margin-bottom: 35px;
 }
-
-.additional-topics {
-    margin-bottom: 30px;
-}
-
-
-/*Helper*/
 
 .text-centered {
     text-align: center;
@@ -119,5 +134,62 @@ footer {
 
 .newsletter-input label {
     margin-left: 15px;
+    margin-bottom: 15px;
 }
 
+.contact-input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-textarea {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.newsletter-textarea textarea {
+    min-height: 100px;
+}
+
+.contact-input label,
+.newsletter-textarea label {
+    margin-bottom: 15px;
+}
+
+.contact-fieldset,
+.newsletter-fieldset {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+}
+
+.input-small-size {
+    max-width: 150px;
+}
+
+@media (min-width: 768px) {
+    .contact-input {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contact-input label {
+        flex-basis: 20%;
+        padding-top: 20px;
+    }
+
+    .contact-input input {
+        max-width: 450px;
+    }
+
+    .contact-input .input-small-size {
+        max-width: 150px;
+    }
+
+    .contact-input select {
+        width: 100%;
+        max-width: 450px;
+    }
+}

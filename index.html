@@ -1,83 +1,99 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-    </head>
-    <body>
-    <div class="page-wrapper">
-        <header>
-            <h1 class="text-centered">the code review</h1>
-        </header>
+<head>
+    <title>newsletter registration form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+</head>
+<body>
+<div class="page-wrapper">
+    <header>
+        <h1 class="text-centered">the code review</h1>
+    </header>
+    <div class="content-wrapper">
         <div class="intro-text page-padding text-centered">
             <h2>Signup for our newsletter</h2>
             <p>get the latest news on how your code is doing right in your inbox</p>
         </div>
+        <div class="form-wrapper page-padding">
+            <form>
+                <fieldset class="contact-fieldset">
+                    <legend>contact information</legend>
+                    <div class="contact-input">
+                        <label for="form-name">Full name</label>
+                        <input id="form-name" name="form-name" placeholder="required" type="text" required>
+                    </div>
+                    <div class="contact-input">
+                        <label for="form-email">Email Address</label>
+                        <input id="form-email" name="form-email" placeholder="required" type="email" required>
+                    </div>
+                    <div class="contact-input">
+                        <label for="form-phone">Phone Number</label>
+                        <input id="form-phone" name="form-phone" placeholder="additional" type="tel">
+                    </div>
+                    <div class="contact-input">
+                        <label for="form-street-address">Street Address</label>
+                        <input id="form-street-address" name="form-street-address"  placeholder="additional" type="text">
+                    </div>
+                    <div class="contact-input">
+                        <label for="form-city-address">City</label>
+                        <input id="form-city-address" name="form-city-address"  placeholder="additional" type="text">
+                    </div>
+                    <div class="contact-input">
+                        <label for="form-city-address">State</label>
+                        <select id="form-state-address" name="form-state-address">
+                            <option selected disabled>Choose State</option>
+                            <option>New York</option>
+                            <option>Virginia</option>
+                            <option>California</option>
+                            <option>Washington</option>
+                        </select>
+                    </div>
+                    <div class="contact-input">
+                        <label for="form-city-zip">Zip Code</label>
+                        <input id="form-city-zip" class="input-small-size" placeholder="additional" type="text">
+                    </div>
+                </fieldset>
+                <fieldset class="newsletter-fieldset">
+                    <legend>Newsletter</legend>
+
+                    <p>Select the newsletter you want to recieve</p>
+                    <div class="newsletter-input">
+                        <input type="checkbox" id="newsletter-html" name="newsletter">
+                        <label for="newsletter-html">HTML News</label>
+                    </div>
+                    <div class="newsletter-input">
+                        <input type="checkbox" id="newsletter-css" name="newsletter">
+                        <label for="newsletter-css">CSS News</label>
+                    </div>
+                    <div class="newsletter-input">
+                        <input type="checkbox" id="newsletter-javascript" name="newsletter">
+                        <label for="newsletter-javascript">Javascript News</label>
+                    </div>
+
+                    <p>Newsletter Format</p>
+                    <div class="newsletter-input">
+                        <input type="radio" id="newsletter-format-html" name="newsletter-format-html">
+                        <label for="newsletter-format-html">HTML</label>
+                    </div>
+                    <div class="newsletter-input">
+                        <input type="radio" id="newsletter-format-text" name="newsletter-format-html">
+                        <label for="newsletter-format-text">Plain text</label>
+                    </div>
+                    <div class="newsletter-textarea">
+                        <label for="additional-topics">Other topics you would like to hear about</label>
+                        <textarea id="additional-topics" name="additional-topics"></textarea>
+                    </div>
+                </fieldset>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
     </div>
-    <form class="page-padding">
-        <fieldset>
-        <legend>Contact Information</legend>
-        <label for="form-name">Full name</label>
-        <input id="form-name" name="form-name" placeholder="Required" type="text">
-
-        <label for="form-email">Email Address</label>
-        <input id="form-email" name="form-email" placeholder="Required" type="email">
-
-        <label for="form-phone">Phone Number</label>
-        <input id="form-phone" name="form-phone" type="tel">
-
-        <label for="form_street-address">Street Address</label>
-        <input id="form-street-address" name="form-street-address" type="text">
-
-        <label for="form-city-address">City</label>
-        <input id="form-city-address" name="form-city-address" type="text">
-
-        <label for="form-city-address">State</label>
-        <select id="form-state-address" name="">
-            <option selected disabled>Choose State</option>
-            <option>Germany</option>
-            <option>Austria</option>
-            <option>Switzerland</option>
-            <option>USA</option>
-        </select>
-
-        <label for="form-city-zip" >Zip Code</label>
-        <input id="form-city-zip" type="text">
-
-        </fieldset>
-        <legend>Newsletter</legend>
-        <p>Select the newsletter you want to recieve</p>
-        <div class="newsletter-input">
-            <input type="checkbox" id="newsletter-html">
-            <label for="newsletter-html">HTML News</label>
-        </div>
-        <div class="newsletter-input">
-            <input type="checkbox" id="newsletter-css">
-            <label for="newsletter-css">CSS News</label>
-        </div>
-        <div class="newsletter-input">
-            <input type="checkbox" id="newsletter-javascript">
-            <label for="newsletter-javascript">Javascript News</label>
-        </div>
-
-        <p>Newsletter Format</p>
-        <div class="newsletter-input">
-            <input type="radio" id="newsletter-format-html" name="newsletter-format-html">
-            <label for="newsletter-format-html">HTML</label>
-        </div>
-        <div class="newsletter-input">
-            <input type="radio" id="newsletter-format-text" name="newsletter-format-html">
-            <label for="newsletter-format-text">Plain text</label>
-        </div>
-
-        <label for="additional-topics">Other topics you would like to hear about</label>
-        <textarea class="additional-topics" id="additional-topics"></textarea>
-        <button type="submit">Sign Up</button>
-        <footer class="text-centered">
-            <i>Copyright The Code Review</i>
-        </footer>
-    </form>
-
-    </body>
+    <footer class="text-centered">
+        <i>Copyright The Code Review</i>
+    </footer>
+</div>
+</body>
 </html>
